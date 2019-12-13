@@ -1,6 +1,13 @@
 # Trick
 ## github
-How to quit GUN after 'git pull': Ctrl+X 
-
+### git pull后如何退出GUN: 
+Ctrl+X 
+###初始未生成.gitignore文件,后续添加后,如何让.gitignore生效:
+<p>
+git rm -r --cached .
+git add .
+git commit -m 'add .gitignore'
+</p>
 ## linux
-Watch gpu occupation(5s a time): watch -n 5 -d nvidia-smi
+###查看gpu占用情况(5s刷新一次):
+watch -n 5 -d nvidia-smi
