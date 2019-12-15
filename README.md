@@ -10,6 +10,7 @@ git rm -r --cached .
 git add .
 git commit -m 'add .gitignore'
 ```
+### 更多关于.gitignore的操作：https://www.cnblogs.com/kevingrace/p/5690241.html
 ### 删除远程库中的某些文件夹,不改变本地的文件夹(如忘记添加忽略规则就push):
 ```
 git pull origin master
