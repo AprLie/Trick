@@ -1,5 +1,10 @@
 # Trick
 ## github
+### git pull, git push每次需要输入密码：
+进入项目所在文件夹，然后输入
+```
+git config --global credential.helper store
+```
 ### git pull后如何退出GUN: 
 ```
 Ctrl+X 
