@@ -32,6 +32,14 @@ git push -u origin master
 ```
 git reset --soft HEAD^
 ```
+### 本地修改后，不想保存本地文件，直接从远程pull
+```
+# 下载远程库最新内容，不作合并
+git fetch --all   
+# 把HEAD指向最新的master版本
+git reset --hard origin/master
+git pull
+```
 
 ## linux
 ### 查看gpu占用情况(5s刷新一次):
