@@ -50,7 +50,7 @@ watch -n 5 -d nvidia-smi
 ## 深度学习 训练
 ### 如何并行化+自动化调参：
 在main.py中,使用argparse,增加参数/超参数
-```
+```py
 parser = argparse.ArgumentParser(description="...")
 parser.add_argument('--test', type=int, default=0, help='...')
 ```
@@ -59,7 +59,7 @@ parser.add_argument('--test', type=int, default=0, help='...')
 python main.py --test 2
 ```
 为了并行化进行,使用multiprocessing,开进程池来实现同时运行多个程序
-```
+```py
 import multiprocessing
 pool = multiprocessing.Pool(processes=30)
 ```
