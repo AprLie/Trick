@@ -64,7 +64,7 @@ import multiprocessing
 pool = multiprocessing.Pool(processes=30)
 ```
 批量传参:将待调参数的可选值形成list,用str转化后形成不同的字符串传给os.system
-```
+```py
 test_parms = np.arange(1, 5, 0.5)
 for i in range(len(test_parms)):
     token = "python main.py --test " + str(test_parms[i]) + " "
