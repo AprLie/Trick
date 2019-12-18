@@ -46,3 +46,32 @@ git pull
 ```
 watch -n 5 -d nvidia-smi
 ```
+
+## 深度学习 训练
+### 如何并行化+自动化调参：
+在main.py中,使用argparse,增加参数/超参数
+```
+parser = argparse.ArgumentParser(description="...")
+parser.add_argument('--test', type=int, default=0, help='...')
+```
+程序运行时使用命令行+参数/超参数，如
+```
+python main.py --test 2
+```
+为了并行化进行,使用multiprocessing,开进程池来实现同时运行多个程序
+```
+import multiprocessing
+pool = multiprocessing.Pool(processes=30)
+```
+批量传参:将待调参数的可选值形成list,用str转化后形成不同的字符串传给os.system
+```
+test_parms = np.arange(1, 5, 0.5)
+for i in range(len(test_parms)):
+    token = "python main.py --test " + str(test_parms[i]) + " "
+    pool.apply_async(os.system, (token,))
+pool.close()
+pool.join()
+```
+
+
+
