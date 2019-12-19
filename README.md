@@ -28,6 +28,12 @@ git rm -r --cached <folder_name or file_name>
 git commit -m 'delete <folder_name or file_name>'
 git push -u origin master
 ```
+### git add后想撤销add:
+```
+git status # 查看modified file
+git reset HEAD # 上一次add全部撤销
+git reset HEAD ./test.py # 仅撤销单个文件
+```
 ### git commit后想撤销commit操作:
 ```bash
 git reset --soft HEAD^
