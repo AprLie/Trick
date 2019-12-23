@@ -7,6 +7,8 @@ https://pythontic.com/visualization/charts/contour%20plot
 ### git pull, git push每次需要输入密码：
 进入项目所在文件夹，然后输入
 ```bash
+git config --global user.name [username]
+git config --global user.email [email]
 git config --global credential.helper store
 ```
 ### git pull后如何退出GUN: 
