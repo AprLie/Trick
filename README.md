@@ -80,6 +80,17 @@ for i in range(len(test_parms)):
 pool.close()
 pool.join()
 ```
+## TMUX
+滚屏(tmux似乎无滚动条功能)
+```
++ 表示同时按下
+ctrl + F #屏幕向下滚动一屏；
+ctrl + B #屏幕向上滚动一屏；
+ctrl + E #屏幕向下滚动一行；
+ctrl + Y #屏幕向上滚动一行；
+ctrl + D #屏幕向下滚动半屏；
+ctrl + U #屏幕向上滚动半屏；
+```
 
 
 
