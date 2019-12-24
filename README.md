@@ -81,7 +81,7 @@ pool.close()
 pool.join()
 ```
 ## TMUX
-滚屏(tmux似乎无滚动条功能)
+### 滚屏(tmux似乎无滚动条功能)
 ```
 + 表示同时按下
 ctrl + F #屏幕向下滚动一屏；
@@ -91,6 +91,10 @@ ctrl + Y #屏幕向上滚动一行；
 ctrl + D #屏幕向下滚动半屏；
 ctrl + U #屏幕向上滚动半屏；
 ```
+
+## mac
+### 剪切文件
+`command + c 选定所需文件， option + command + v 剪切到指定位置`
 
 
 
