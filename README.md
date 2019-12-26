@@ -81,6 +81,37 @@ pool.close()
 pool.join()
 ```
 ## TMUX
+新建会话
+```
+tmux new -s session_name
+```
+中断会话,使会话在后台运行
+```
+tmux detach
+prefix te d
+```
+恢复会话
+```
+tmux a # 默认进入第一个会话
+tmux a -t demo # 进入到名称为demo的会话
+```
+关闭会话
+```
+tmux kill-session -t demo # 关闭demo会话
+tmux kill-server # 关闭服务器，所有的会话都将关闭
+```
+查看会话
+```
+tmux ls # 不在会话中
+prefix te s
+```
+
+
+
+
+
+
+
 ### 滚屏(tmux似乎无滚动条功能)
 ```
 + 表示同时按下
