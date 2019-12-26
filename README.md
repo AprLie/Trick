@@ -107,5 +107,9 @@ prefix te z #当前面板放大/再按一次后恢复
 ### 剪切文件
 `command + c 选定所需文件， option + command + v 剪切到指定位置`
 
+## tensorflow坑
+### tf.cond
+tf.cond用于tf里的tensor进行数值比较等操作,形式为 tf.cond(pred,true_fn=,false_fn=).注意:pred中进行判断的tensor的dtype与true/false_fn返回的dtype类型应该一致
+
 
 
