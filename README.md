@@ -1,9 +1,8 @@
-
-# Trick
-## Lab
+# Lab
 ### 等高线绘制
 https://pythontic.com/visualization/charts/contour%20plot
-## github
+
+# github
 ### git pull, git push每次需要输入密码：
 进入项目所在文件夹，然后输入
 ```bash
@@ -49,13 +48,24 @@ git reset --hard origin/master
 git pull
 ```
 
-## linux
+# linux
 ### 查看gpu占用情况(5s刷新一次):
 ```bash
 watch -n 5 -d nvidia-smi
 ```
+### 新环境搭建
+1.anaconda安装
+2.创建anaconda环境,安装所需包
+```
+conda create -n tf python=3.6.5 pip numpy==1.14.3 scipy==1.1.0 scikit-learn==0.19.1 matplotlib gensim tqdm networkx cudatoolkit==10.0.130 cudnn
+```
+3.安装tensorflow的GPU版本
+```
+pip install tensorflow-gpu==1.13.1
+```
 
-## 深度学习 训练
+
+# 深度学习 训练
 ### 如何并行化+自动化调参：
 在main.py中,使用argparse,增加参数/超参数
 ```py
@@ -80,7 +90,8 @@ for i in range(len(test_parms)):
 pool.close()
 pool.join()
 ```
-## TMUX
+
+# TMUX
 新建会话
 ```
 tmux new -s session_name
@@ -105,13 +116,6 @@ tmux kill-server # 关闭服务器，所有的会话都将关闭
 tmux ls # 不在会话中
 prefix te s
 ```
-
-
-
-
-
-
-
 ### 滚屏(tmux似乎无滚动条功能)
 ```
 + 表示同时按下
@@ -134,11 +138,11 @@ prefix te z #当前面板放大/再按一次后恢复
 ```
 
 
-## mac
+# mac
 ### 剪切文件
 `command + c 选定所需文件， option + command + v 剪切到指定位置`
 
-## tensorflow坑
+# tensorflow
 ### tf.cond
 tf.cond用于tf里的tensor进行数值比较等操作,形式为 tf.cond(pred,true_fn=,false_fn=).注意:pred中进行判断的tensor的dtype与true/false_fn返回的dtype类型应该一致
 
