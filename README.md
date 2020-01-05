@@ -49,6 +49,12 @@ git pull
 ```
 
 # linux
+### 更改win和ubuntu的启动界面顺序（默认成为先启动win）
+```
+sudo mv /etc/grub.d/30_os-prober /etc/grub.d/08_os-prober
+sudo update-grub
+reboot
+```
 ### 查看gpu占用情况(5s刷新一次):
 ```bash
 watch -n 5 -d nvidia-smi
@@ -63,7 +69,20 @@ conda create -n tf python=3.6.5 pip numpy==1.14.3 scipy==1.1.0 scikit-learn==0.1
 ```
 pip install tensorflow-gpu==1.13.1
 ```
-
+### nvidia 驱动
+卸载原有驱动
+```
+sudo apt-get install remove nvidia* --purge
+```
+官网下载驱动（。run文件）
+添加权限
+```
+chmod +x NVIDIA-Linux-x86_64-440.44.run
+```
+运行
+```
+sudo ./NVIDIA-Linux-x86_64-440.44.run
+```
 
 # 深度学习 训练
 ### 如何并行化+自动化调参：
