@@ -79,10 +79,7 @@ sudo apt-get install remove nvidia* --purge
 ```
 chmod +x NVIDIA-Linux-x86_64-440.44.run
 ```
-运行
-```
-sudo ./NVIDIA-Linux-x86_64-440.44.run
-```
+参见https://blog.csdn.net/xiaowo123456/article/details/100925631
 
 # 深度学习 训练
 ### 如何并行化+自动化调参：
