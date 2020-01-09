@@ -179,6 +179,14 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 session = tf.Session(config=config)
 ```
+### 访问服务器上的teosorboard
+Mac/linux
+```
+ssh -L 16006:127.0.0.1:6006 account@server.address
+tensorboard --logdir="/path/to/log-directory"
+```
+在本地访问
+http://127.0.0.1:16006/
 
 # Vim
 ### 显示vim中的不可见字符,如缩进等
