@@ -73,6 +73,15 @@ git add .
 可见 https://help.github.com/cn/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line
 
 # linux
+### 压缩和解压文件
+压缩当前目录下文件夹/文件test到test.tar.gz:
+```
+tar -zcvf test.tar.gz test
+```
+解压缩当前目录下的file.tar.gz到file:
+```
+tar -zxvf file.tar.gz
+```
 ### 更改win和ubuntu的启动界面顺序（默认成为先启动win）
 ```
 sudo mv /etc/grub.d/30_os-prober /etc/grub.d/08_os-prober
