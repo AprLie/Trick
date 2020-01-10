@@ -47,6 +47,30 @@ git fetch --all
 git reset --hard origin/master
 git pull
 ```
+### 本地和服务器都改了代码，一边push后另一边无法pull，显示
+```
+error: Your local changes to the following files would be overwritten by merge: xxx.py Please, commit your changes or stash them before you can merge.
+```
+先用stash保存
+```
+git stash
+git pull
+git stash pop
+```
+在pop步一般会出错，如
+```
+Auto-merging main.py
+CONFLICT (content): Merge conflict in xxx.py
+```
+方案：
+```
+git status #查看出问题的地方
+```
+通过vim修改代码，最后
+```
+git add .
+```
+可见 https://help.github.com/cn/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line
 
 # linux
 ### 更改win和ubuntu的启动界面顺序（默认成为先启动win）
