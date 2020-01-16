@@ -92,6 +92,18 @@ reboot
 ```bash
 watch -n 5 -d nvidia-smi
 ```
+无进程但占用显存
+```
+fuser -v /dev/nvidia*
+```
+得到隐藏的PID后,使用
+```
+pmap -d PID
+```
+查看其运行的任务或命令,然后可
+```
+kill PID
+```
 ### 新环境搭建
 1.anaconda安装
 2.创建anaconda环境,安装所需包
