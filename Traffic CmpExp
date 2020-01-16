@@ -1,0 +1,23 @@
+## ASTGCN
+环境安装
+```
+conda create -n mx python=3.5 pip
+pip install  mxnet-cu100mkl
+pip install -r requirement.txt
+```
+传入邻接链表
+
+###
+记得在train.py和lib/util.py进行注释
+
+## STGCN
+数据格式:
+csv: 格式 T*N. T=288 * 天数
+邻接矩阵:
+N*N
+
+运行代码
+```
+# pemsd3
+python main.py --num_of_vertices 358 --adj_path datasets/pemsd3/pemsd3_stgcnadj.csv --time_series_path datasets/pemsd3/pemsd3_stgcndata.csv
+```
