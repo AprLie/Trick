@@ -23,5 +23,5 @@ python main.py --num_of_vertices 358 --adj_path datasets/pemsd3/pemsd3_stgcnadj.
 ```
 ```
 #pemsd7
-python main.py --num_of_vertices 883 --adj_path /home/xu/project/traffic/data/PEMS07/pemsd7_stgcnadj.csv --time_series_path /home/xu/project/traffic/data/PEMS07/pemsd7_sgtcndata.csv
+python main.py --num_of_vertices 883 --adj_path /home/xu/project/traffic/data/PEMS07/pemsd7_stgcnadj.csv --time_series_path /home/xu/project/traffic/data/PEMS07/pemsd7_stgcndata.csv
 ```
