@@ -73,6 +73,11 @@ git add .
 可见 https://help.github.com/cn/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line
 
 # linux
+
+### /mnt下的权限设置
+```
+sudo chown -R FAREAST.XXX *
+```
 ### 压缩和解压文件
 压缩当前目录下文件夹/文件test到test.tar.gz:
 ```
