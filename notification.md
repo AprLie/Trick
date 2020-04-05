@@ -11,6 +11,8 @@ https://github.com/microsoft/DeepSpeed
 ## 图神经网络
 ### 脉络
 https://mp.weixin.qq.com/s/hyHUkiEyXGn3v-M0d0igVg
+### Simple and Effective Graph Autoencoders with One-Hop Linear Models
+图AE或VAE使用一跳信息即可.  http://arxiv.org/abs/2001.07614
 
 
 # 网络科学
