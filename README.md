@@ -90,6 +90,7 @@ pool.join()
 ```
 
 # TMUX
+配置 https://github.com/gpakosz/.tmux
 新建会话
 ```
 tmux new -s session_name
