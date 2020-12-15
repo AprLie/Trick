@@ -5,8 +5,9 @@
 wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
 sudo sh cuda_10.2.89_440.33.01_linux.run --silent --toolkit --toolkitpath=/usr/local/cuda-10.2
 ```
-
-
+### kill未被停止的占用GPU显存的进程
+https://blog.csdn.net/shanglianlm/article/details/85052773
+sudo fuser -v /dev/nvidia* |awk '{for(i=1;i<=NF;i++)print "kill -9 " $i;}' | sudo sh
 
 
 ### /mnt下的权限设置
