@@ -1,4 +1,8 @@
 # Ubuntu
+### 批量kill无用的GPU进程(占用显存)
+```
+sudo fuser -v /dev/nvidia* |awk '{for(i=1;i<=NF;i++)print "kill -9 " $i;}' | sudo sh
+```
 ### 多版本cuda  
 1.安装:
 ```
