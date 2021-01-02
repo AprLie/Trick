@@ -1,4 +1,20 @@
 # Ubuntu
+### gcr server 之间进行数据传递(跳过password环节;gcr是没有密码的,所以只能以此方式进行)
+1.在server A上用  
+```
+ssh-keygen
+```
+先生成id_rsa.pub文件  
+2.将id_rsa.pub scp到本地(拥有连接两台gcr server权限的机器),再scp到server B上  
+3.如果server B没有 authorized_keys 文件,则需要
+```
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+如果已经有该文件,直接执行最后一步即可
 ### 批量kill无用的GPU进程(占用显存)
 ```
 sudo fuser -v /dev/nvidia* |awk '{for(i=1;i<=NF;i++)print "kill -9 " $i;}' | sudo sh
@@ -50,7 +66,15 @@ pmap -d PID
 kill PID
 ```
 ### 新环境搭建
-1.anaconda安装
+1.anaconda安装 bash脚本
+```
+wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh -O ~/anaconda.sh
+sudo bash ~/anaconda.sh -b -p $HOME/anaconda3
+sudo echo "export PATH=/home/v-xuche3/anaconda3/bin:$PATH">>~/.bashrc
+source ~/.bashrc
+conda env list
+```
+其中路径视具体情况进行改动  
 2.创建anaconda环境,安装所需包
 ```
 conda create -n tf python=3.6.5 pip numpy==1.14.3 scipy==1.1.0 scikit-learn==0.19.1 matplotlib gensim tqdm networkx cudatoolkit==10.0.130 cudnn
