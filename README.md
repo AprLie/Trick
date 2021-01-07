@@ -83,19 +83,8 @@ prefix te z #当前面板放大/再按一次后恢复
 # tensorflow
 ### tf.cond
 tf.cond用于tf里的tensor进行数值比较等操作,形式为 tf.cond(pred,true_fn=,false_fn=).注意:pred中进行判断的tensor的dtype与true/false_fn返回的dtype类型应该一致
-### 指定GPU进行训练
-1.在命令行中指定
-```
-CUDA_VISIBLE_DEVICES=0  python run.py   #使用GPU 0
-CUDA_VISIBLE_DEVICES=0,1 python run.py  #使用GPU 0,1
-```
-2.在python文件中指定
-```py
-import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'    #使用GPU 0
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'  #使用GPU 0,1
-```
-3.按需增加GPU显存的使用
+
+### 按需增加GPU显存的使用
 ```
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
