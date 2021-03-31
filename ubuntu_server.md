@@ -1,4 +1,7 @@
 # GCR server
+### vscode 无法连接远程服务器
+1. 报错```local server exit 15```  
+解决方案: 在服务器上把~/.vscode-server文件删除即可
 ### gcr server 之间进行数据传递(跳过password环节;gcr是没有密码的,所以只能以此方式进行)
 1.在server A上用  
 ```
@@ -34,6 +37,7 @@ https://blog.csdn.net/shanglianlm/article/details/85052773
 ```
 sudo fuser -v /dev/nvidia* |awk '{for(i=1;i<=NF;i++)print "kill -9 " $i;}' | sudo sh
 ```
+
 非批量操作:  
 查看进程
 ```
