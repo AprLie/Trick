@@ -116,3 +116,19 @@ sudo mv /etc/grub.d/30_os-prober /etc/grub.d/08_os-prober
 sudo update-grub
 reboot
 ```
+
+
+# 阿里云
+注: 阿里云用的是centos,不同于ubuntu,故安装指令有差异
+## yum异常
+主要由yum不支持python3导致,出现一些``expectError``
+修改方案:
+1. 进入``/usr/bin/``,看看python2.x是哪个版本  
+2. 修改文件
+  ```
+  vim /usr/bin/yum 
+  ```  
+  将第一行替换成2.X （如``#!/usr/bin/python2.7``）  
+3、修改urlgrabber-ext-down
+  ```vim /usr/libexec/urlgrabber-ext-down```
+  同样替换第一行
