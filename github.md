@@ -1,4 +1,21 @@
 # github
+### git push/pull/fetch 等显示SSL_ERROR_SYSCALL 
+梯子设置全局代理, 修改http代理不知道是否是生效原因,参见https://blog.hyperzsb.tech/git-ssl-error/
+### git push显示账户密码形式失效
+将repo地址设置为`git remote set-url origin https://<your_token>@github.com/<USERNAME>/<REPO>.git`,如果在vscode上可进行认证,则不需要更改remote.
+参见https://blog.csdn.net/weixin_41010198/article/details/119698015
+### 配置overleaf-vscode-github
+1. 在vscode中初始化repo, 记得`git init`
+2. github创建私仓
+3. 关联repo和github
+```
+git remote add origin ....
+git add .
+git commit -m 'init push'
+git push -u origin master
+```
+4. 在overleaf中import from github
+### 
 ### git pull, git push每次需要输入密码：
 进入项目所在文件夹，然后输入
 ```bash
